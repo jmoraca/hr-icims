@@ -1,0 +1,356 @@
+// Main Menu
+// ================================================================================
+/* Desktop View */
+@media(min-width: $breakpoint-lg) {
+	#block-universitylinks {
+		ul.nav {
+			a {
+				font-size: $small-font-size;
+				padding: 0.25rem 1rem;
+			}
+		}
+	}
+
+	.main-menu {
+		ul.main {
+			> li {
+				position: relative;
+				margin: 0 .75rem;
+				border-bottom: 4px solid transparent;
+
+				> a {
+					font-size: 20px;
+					text-transform: uppercase;
+					padding: 0.5rem;
+				}
+
+				&:last-child {
+					&:hover {
+						border-bottom-color: transparent;
+						background-color: $color-base;
+					}
+
+					a {
+					border: 1px solid $color-secondary-orange;
+					font-size: 1.1rem;
+					padding: .25rem .5rem;
+					text-transform: capitalize;
+					margin-top: .25rem;
+				}
+			}
+			}
+
+			> li:hover,
+			> li:focus,
+			> li.added-focus,
+			> li.active {
+				border-bottom-color: $color-secondary-orange;
+			}
+		}
+		
+		//Main menu arrow icon
+		ul.nav {
+			> .expanded > a {
+				position: relative;
+				padding: 0.5rem 1.5rem 0.5rem 0.25rem;
+
+				&:after {
+					@include icon-arrow-down;
+				} 
+			}
+
+			> li.expanded:hover > a:after,
+			> li.added-focus > a:after,
+			> li.expanded > a:focus:after {
+				@include icon-arrow-down-rotation;
+			}
+		}
+	}
+
+	.main-navigation .menu-items {
+		.sub-menu {
+			list-style: none;
+			line-height: 1.45em;
+
+			li {
+				margin-bottom: .45rem;
+			}
+		}
+
+		> li {
+			list-style: none;
+
+			> .sub-menu {
+				position: absolute;
+				top: 100%;
+				left: -9999px;
+				opacity: 0;
+				-webkit-transform: translateY(-20px);
+				-ms-transform: translateY(-20px);
+				transform: translateY(-20px);
+				-webkit-transition: opacity 300ms ease, -webkit-transform 300ms ease;
+				transition: opacity 300ms ease, -webkit-transform 300ms ease;
+				-o-transition: opacity 300ms ease, transform 300ms ease;
+				transition: opacity 300ms ease, transform 300ms ease;
+				transition: opacity 300ms ease, transform 300ms ease, -webkit-transform 300ms ease;
+				z-index: 10;
+				min-width: 290px;
+				margin: 0;
+				background-color: $color-white;
+				padding: 2rem;
+				box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px;
+				border-width: 1px 1px 1px;
+				border-style: none solid solid;
+				border-color: $color-gray-light $color-gray-light $color-gray-light;
+				width: 100%;
+				margin-top: 4px;
+
+				a {
+					border-bottom: 2px solid $color-white;
+					color: $color-base;
+					-webkit-transition: border-color .3s;
+					transition: border-color .3s;
+					padding: 0;
+					display: inline;
+					color: $color-base;
+
+					&:hover {
+						border-bottom: 2px solid $color-secondary-teal;
+					}
+				}
+
+				.sub-menu {
+					margin: 1rem 0 1rem .5rem;
+					border-left: 2px solid $color-secondary-orange;
+					padding-left: 1rem;
+				}
+			}
+
+			&:hover > .sub-menu {
+				left: 0;
+				opacity: 1;
+				-webkit-transform: translateY(0);
+				-ms-transform: translateY(0);
+				transform: translateY(0);
+			}
+		}
+	}
+}
+
+@media(min-width: $breakpoint-lg) and (max-width: $breakpoint-xl - 1px) {
+	.main-menu {
+		ul.main {
+			> li {
+
+				margin: 0 .25rem;
+
+
+				> a {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+
+//mobile menu
+@media(max-width: $breakpoint-lg - 1px) {
+	//menu and search icon
+	.header {
+		.toggle-mobile-menu-icon,
+		.toggle-search-icon {
+			font-size: 1.5rem;
+			color: white;
+		}
+
+		.toggle-mobile-menu-title {
+			text-transform: uppercase;
+			font-size: 1.25rem;
+			font-weight: 300;
+		}
+	}
+
+	#main-menu {
+		background-color: $color-white;
+
+		ul.nav li a {
+			color: $color-base;
+		}
+
+		ul.main {
+			a {
+				font-size: 1.2rem;
+				padding: .85rem;
+				border-bottom: 1px solid $color-gray-light;
+				border-left: 4px solid transparent;
+			}
+
+			> li.active > a {
+				border-left-color: $color-secondary-orange;
+				font-weight: 500;
+			}
+
+			li.active li.active a {
+				background-color: $color-secondary-orange-lightest;
+				font-weight: 500;
+			}
+
+			ul.submenu {
+				a {
+					font-size: 1rem;
+				}
+
+				.toggle-submenu {
+					display: none;
+				}
+
+				ul.submenu {
+					display: none;
+				}
+			}
+		}
+
+		li.expanded {
+			.fas {
+			color: $color-base;
+		}
+
+		.toggle-submenu {
+			top: 0;
+			padding: 0.85rem 0.5rem;
+			cursor: pointer;
+		}
+	}
+
+		//utility menu includes events, news and quick links
+		.region-utility-menu {
+			ul.utility-nav {
+				li {
+					border-bottom: 1px solid $color-gray-light;
+					font-size: 1rem;
+					color: $color-base;
+					margin: 0.25rem 0;
+
+					&.expanded:last-child {
+						padding: .5rem .85rem .5rem 1.25rem;
+					}
+
+					&.expanded .toggle-submenu {
+						padding: 0.5rem; 
+					}
+
+					&.expanded .submenu {
+						padding-left: 0;
+						margin-left: 0;
+					}
+
+					a {
+						font-size: 1rem;
+						padding: .5rem .85rem .5rem 1.25rem;
+					}
+				}
+			}
+		}
+	}
+
+	//University links
+	#block-universitylinks {
+		ul.nav {
+			@include display-flex;
+		}
+	}
+
+	.menu--social-links {
+		margin: 1rem 0 1rem 1rem;
+		display: inline-block;
+		float: left;
+		width: 65%;
+
+		ul.nav li {
+			display: inline-block;
+			margin-right: .5rem;
+
+			> a {
+				@include icon-with-orange-bg;
+			}
+
+			span.ext {
+				display: none;
+			}
+		}
+	}
+}
+
+header .main-menu {
+	flex-grow: 1;
+	border-top: 1px solid rgba($color-primary-lighter, .3);
+	padding-top: .25rem;
+
+	.container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+#main-menu {
+	justify-content: flex-end;
+}
+
+@media(min-width: $breakpoint-med) and (max-width: $breakpoint-lg - 1px) {
+	.top_header {
+		.block-ps-social-links {
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: flex-end;
+			flex-grow: 1;
+		}
+	}
+}
+
+@media(min-width: $breakpoint-lg) {
+	.header {
+		.collapse:not(.show) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+
+	.top-utility-menus {
+		justify-content: space-between;
+		order: 1;
+		flex-basis: 100%;
+	}
+
+	.main-menu {
+		order: 2;
+	}
+}
+
+@media(max-width: $breakpoint-lg - 1px) {
+	.header {
+		.navbar-collapse {
+			position: initial;
+			top: 0;
+		}
+		> .collapse.show {
+			background-color: $color-white;
+			width: 100%;
+			flex-wrap: wrap;		
+		}
+
+		.top-utility-menus {
+			display: block;
+			background-color: white;
+			overflow: hidden;
+			a {
+				color: $color-base;
+			}
+		}
+
+		.toggle-mobile-menu {
+			position: absolute;
+			right: 2rem;
+			top: 2rem;
+		}
+	}
+}

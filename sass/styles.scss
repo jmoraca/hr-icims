@@ -1,0 +1,30 @@
+@import 'base/fonts';
+
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'base/base';
+
+@import 'layout/header';
+@import 'layout/footer';
+
+@import 'components/menu';
+@import 'components/icons';
+@import 'components/hero';
+
+#main {
+	min-height: 20vh;
+}
+
+
+.container .row {
+	@media (min-width: 561px) {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	@media (max-width: 560px) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}

@@ -1,0 +1,99 @@
+@mixin button-arrow {
+	position: relative;
+	display: inline-block;
+	border-bottom: none;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: $small-font-size;
+}
+
+@mixin button-arrow-after {
+	content: '';
+	background: url('/themes/custom/hr/images/icon-arrow-right.svg') no-repeat 0 0;
+	background-size: 42px;
+	width: 42px;
+	height: 27px;
+	display: inline-block;
+}
+
+@mixin icon-arrow-down {
+	display: block;
+	content: '';
+	width: 20px;
+	height: 20px;
+	background: url(../images/icon_down.svg) no-repeat center right;
+	background-size: 20px 20px; 
+	transition: all 0.1s;
+	position: absolute;
+	right: 0;
+	top: 30%;
+}
+
+@mixin icon-arrow-down-rotation {
+	transform: rotate(-180deg);
+	-webkit-transform: rotate(-180deg);
+	transition-duration: 0.5s;
+}
+
+@mixin remove-link-underline {
+	border-bottom-width: 0;
+	box-shadow: none;
+}
+
+@mixin remove-link-underline-hover {
+	box-shadow: none;
+}
+
+@mixin link-teal-underline {
+	border-bottom: 1px solid $link-color;
+	box-shadow: 0 -0.2em 0 rgba($link-hover-active-color,0) inset;
+	transform: translateZ(0);
+	transition: 150ms ease;
+	font-weight: 500;
+}
+
+@mixin link-hover-teal {
+	border-bottom-color: transparent;
+	text-decoration: none;
+	box-shadow: 0 -1em 0 rgba($link-hover-active-color,1) inset;
+}
+
+@mixin display-flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+//Orange border button
+@mixin orange-border-btn {
+	border-bottom-width: 0;
+	box-shadow: none;
+	display: inline-block;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+	border: 1px solid $color-secondary-orange;
+	padding: .25rem 1.5rem;
+	font-size: .925rem;
+}
+
+@mixin orange-border-btn-hover {
+	box-shadow: none;
+	background-color: $color-base;
+	color: $color-white;
+	border-color: $color-base;
+}
+
+
+
+@mixin icon-with-orange-bg {
+	font-size: 0;
+	background-position: 50% 50%;
+	padding: 1rem;
+	background-color: $color-secondary-orange;
+	background-size: 25px;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	border-radius: 5px;
+}
+

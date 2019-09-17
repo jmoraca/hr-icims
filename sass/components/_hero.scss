@@ -1,0 +1,98 @@
+.ats-hero {
+	background-image: url("../images/donald-juarez2.jpg");
+  position: relative;
+  padding-top: 111px;
+  max-height: 400px;
+  height: 100vh;
+  background-color: #222;
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+
+  .onboard & {
+    background-image: url("../images/angela-francis.jpg");
+    background-position-y: 0;
+  }
+
+  @media(min-width: $breakpoint-lg) and (max-width: $breakpoint-xl - 1px) {
+    padding-top: 129px;
+  }
+
+  @media(max-width: $breakpoint-lg - 1px) {
+    padding-top: 80px;
+  }
+
+  .container {
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.ats-hero__content {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 40%;
+  padding: 30px 40px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+
+  @media(min-width: $breakpoint-lg) and (max-width: $breakpoint-xl - 1px) {
+    width: 45%;
+    padding: 30px 20px;
+  }
+
+  h1 {
+    color: #fff;
+    position: relative;
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+
+    &:before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: "";
+      display: block;
+      height: 5px;
+      width: 50px;
+      background: #ee7f2d;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+    font-size: 1rem;
+    margin-top: -1.2em;
+    margin-left: 100px;
+  }
+
+  @media(max-width: $breakpoint-lg - 1px) {
+    height: auto;
+    width: 100%;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding-right: 40%;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  @media(max-width: $breakpoint-med - 1px) {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+

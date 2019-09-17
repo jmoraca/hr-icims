@@ -1,0 +1,76 @@
+
+
+// @ Breakpoints
+// ================================================================================
+$breakpoint-xs:   414px;
+$breakpoint-mobile:   575px;
+$breakpoint-sm:   576px;
+$breakpoint-med:  768px;
+$breakpoint-lg:   992px;
+$breakpoint-xl:   1200px;
+$breakpoint-xxl: 1440px;
+
+//small mobile
+@media(max-width: $breakpoint-xs) {
+
+}
+
+//Mobile
+@media(max-width: $breakpoint-mobile) {
+
+}
+
+//above the Mobile
+@media(min-width: $breakpoint-sm) {
+
+}
+
+//between 576 and 767
+@media(min-width: $breakpoint-sm) and (max-width: $breakpoint-med - 1px) {
+
+}
+
+//under Tablet 767
+@media(max-width: $breakpoint-med - 1px) {
+
+}
+
+//between Tablet and 991
+@media(min-width: $breakpoint-med) and (max-width: $breakpoint-lg - 1px) {
+
+}
+
+//Above Tablet
+@media(min-width: $breakpoint-med) {
+
+}
+
+//This is an important breakpoint for layout and menu items
+@media(max-width: $breakpoint-lg - 1px) {
+
+}
+
+//992 and 1199
+@media(min-width: $breakpoint-lg) and (max-width: $breakpoint-xl - 1px) {
+		
+}
+
+//minimum 992
+@media(min-width: $breakpoint-lg) {
+
+}
+
+//minimu 1200
+@media(min-width: $breakpoint-xl) {
+
+}
+
+//max 1199
+@media(max-width: $breakpoint-xl - 1px) {
+
+}
+
+//min 1200 and max 1339
+@media(min-width: $breakpoint-xl) and (max-width: $breakpoint-xxl - 1px) {
+
+}
