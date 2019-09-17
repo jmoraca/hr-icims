@@ -1,7 +1,7 @@
 .ats-hero {
 	background-image: url("../images/donald-juarez2.jpg");
   position: relative;
-  padding-top: 111px;
+  padding-top: 103px;
   max-height: 400px;
   height: 100vh;
   background-color: #222;
@@ -15,7 +15,7 @@
   }
 
   @media(min-width: $breakpoint-lg) and (max-width: $breakpoint-xl - 1px) {
-    padding-top: 129px;
+    padding-top: 127px;
   }
 
   @media(max-width: $breakpoint-lg - 1px) {

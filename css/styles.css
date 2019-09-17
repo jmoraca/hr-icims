@@ -1086,7 +1086,7 @@ span.ext {
 .ats-hero {
   background-image: url("../images/donald-juarez2.jpg");
   position: relative;
-  padding-top: 111px;
+  padding-top: 103px;
   max-height: 400px;
   height: 100vh;
   background-color: #222;
@@ -1100,7 +1100,7 @@ span.ext {
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .ats-hero {
-    padding-top: 129px;
+    padding-top: 127px;
   }
 }
 @media (max-width: 991px) {
