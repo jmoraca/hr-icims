@@ -132,11 +132,6 @@
 }
 
 .header .navbar-collapse {
-	@media(min-width: $breakpoint-lg) and (max-width: $breakpoint-xl - 1px) {
-		background: transparent;
-		margin-top: 2rem;
-	}
-
 	@media(max-width: $breakpoint-lg - 1px) {
 		top: 5rem;
 	}

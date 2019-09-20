@@ -1,18 +1,36 @@
 .ats-hero {
-	background-image: url("../images/donald-juarez2.jpg");
-  position: relative;
-  padding-top: 103px;
-  max-height: 400px;
-  height: 100vh;
-  background-color: #222;
-  background-size: cover;
-  background-position: center 30%;
-  background-repeat: no-repeat;
+  @media(min-width: $breakpoint-med) {
+    position: relative;
+    padding-top: 103px;
+    max-height: 400px;
+    height: 100vh;
+    background-color: #222;
+    background-image: url("../images/donald-juarez.jpg");
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+
+    img {
+      display: none;
+    }
+  }
 
   .onboard & {
-    background-image: url("../images/angela-francis.jpg");
-    background-position-y: 0;
+    @media(min-width: $breakpoint-med) {
+      background-image: url("../images/angela-francis.jpg");
+      background-position-y: 0;
+    }
+
+    @media(min-width: $breakpoint-xxl) {
+      background-position-y: 20%;
+    }
   }
+
+  // .hero-header {
+  //   @media(max-width: $breakpoint-med - 1px) {
+  //     max-height: 244px;
+  //   }
+  // }
 
   @media(min-width: $breakpoint-lg) and (max-width: $breakpoint-xl - 1px) {
     padding-top: 127px;
@@ -29,6 +47,10 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
+
+    @media(max-width: $breakpoint-med - 1px) {
+      background-color: #f5f5f5;
+    }
   }
 }
 
@@ -40,18 +62,24 @@
   width: 40%;
   padding: 30px 40px;
   background: rgba(0, 0, 0, 0.6);
-  color: #fff;
+  color: $color-white;
 
   @media(min-width: $breakpoint-lg) and (max-width: $breakpoint-xl - 1px) {
     width: 45%;
     padding: 30px 20px;
   }
 
+
   h1 {
-    color: #fff;
+    color: $color-white;
     position: relative;
     padding-bottom: 30px;
     margin-bottom: 10px;
+
+    @media(max-width: $breakpoint-med - 1px) {
+      color: $color-base;
+      font-size: 2rem;
+    }
 
     &:before {
       position: absolute;
@@ -61,7 +89,11 @@
       display: block;
       height: 5px;
       width: 50px;
-      background: #ee7f2d;
+      background: $color-secondary-orange;
+
+      @media(max-width: $breakpoint-xs) {
+        width: 25px;
+      }
     }
   }
 
@@ -70,29 +102,39 @@
     font-size: 1rem;
     margin-top: -1.2em;
     margin-left: 100px;
+
+    @media(max-width: $breakpoint-xs) {
+      margin-top: -1.5em;
+      margin-left: 40px;
+    }
   }
 
-  @media(max-width: $breakpoint-lg - 1px) {
-    height: auto;
-    width: 100%;
-    top: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    padding-right: 40%;
-    background: rgba(0, 0, 0, 0.4);
-  }
+  // @media(max-width: $breakpoint-lg - 1px) {
+  //   height: auto;
+  //   width: 100%;
+  //   top: 0;
+  //   display: -webkit-box;
+  //   display: -ms-flexbox;
+  //   display: flex;
+  //   -webkit-box-orient: vertical;
+  //   -webkit-box-direction: normal;
+  //   -ms-flex-direction: column;
+  //   flex-direction: column;
+  //   -webkit-box-pack: end;
+  //   -ms-flex-pack: end;
+  //   justify-content: flex-end;
+  //   padding-right: 40%;
+  
+  // }
 
   @media(max-width: $breakpoint-med - 1px) {
+    width: 100%;
+    position: relative;
+    background-color: $color-gray-lightest;
+    color: $color-base;
     padding-left: 4%;
     padding-right: 4%;
   }
 }
+
 
