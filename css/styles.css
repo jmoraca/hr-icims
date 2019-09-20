@@ -266,6 +266,7 @@ p {
 .site-branding {
   padding: 0.75rem 0;
   margin-right: 2rem;
+  flex-basis: 22%;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .site-branding {
