@@ -229,6 +229,10 @@
 			}
 		}
 
+		.col-sm-5:nth-child(1) {
+			padding-left: 0;
+		}
+
 		@media(min-width: $breakpoint-sm) and (max-width: $breakpoint-lg - 1px) {
 			.row > .layout__region {
 				padding-left: 1rem;
